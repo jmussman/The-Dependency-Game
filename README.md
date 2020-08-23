@@ -49,7 +49,7 @@ onto your computer.
     * Or, at the command line in the project run "mvn install" (you have to have Maven installed as a command on your computer)
 4. Clone this project (The Dependency Game) from GitHub to your computer:
     * `git clone git@github.com:jmussman/The-Dependency-Game.git` 
-5. Open this project in your IDE.
+5. Open this project in your IDE as a Maven project (import as Maven, add as Maven, etc.).
 
 ### Project Steps
 
