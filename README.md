@@ -39,15 +39,16 @@ The dependency projects are not in the Maven repository, so you have to do a lit
 onto your computer. 
 
 1. You will need an IDE configured for Java, and with Maven, such as Eclipse or InteliJ IDEA.
-2. Clone the following three projects from GitHub:
-    1. git@github.com:jmussman/credit-card-validator.git 
-    2. git@github.com:jmussman/The-Bank-of-Random-Credit-Authorizer.git 
-    3. git@github.com:jmussman/Everyone-is-Authorized-Client.git
+2. Clone the following three projects from GitHub (change "git&commat;github.com:jmussman" to
+   "https://github.com/jmussman" if you want to use https instead of ssh):
+    1. git&commat;github.com:jmussman/credit-card-validator.git 
+    2. git&commat;github.com:jmussman/The-Bank-of-Random-Credit-Authorizer.git 
+    3. git&commat;github.com:jmussman/Everyone-is-Authorized-Client.git
 3. Run a Maven install for the each project:
     * With the project open in your IDE use the Maven commands to run the "install" goal
     * Or, at the command line in the project run "mvn install" (you have to have Maven installed as a command on your computer)
 4. Clone this project from GitHub to your computer:
-    * git@github.com:jmussman/The-Dependency-Game.git 
+    * git&commat;github.com:jmussman/The-Dependency-Game.git 
 5. Open this project (The Dependency Game) in the IDE.
 
 ### Project Steps
@@ -136,16 +137,16 @@ This will all be fixed with dependency injection!
     But, at least we have dependency injection now and we can make it better!
 25. In the SalesOrderManagerTests setup method remove the instantiation of the ICreditCardAuthorizer.
 26. Annotate the test class with "@ExtendWith(MockitoExtension.class)".
-    This makes the test execute with the Mockito test runner instead of the regular JUnit 5 runner.
+    This makes the tests in this class execute with the Mockito test runner instead of the regular JUnit 5 runner.
 27. Annotate the ICreditCardAuthorizer member with "@Mock".
     This annotation tells Mockito to assign to the variable a test-double object that implements the interface.
-28. In the orderIsCompleted method add a Mockito statement to define the behavior of the test-double (the mock)
+28. In the orderIsCompleted test method add a Mockito statement to define the behavior of the test-double (the mock)
     when the interface method is called with a good card number:
     
     when(authorizer.authorize("378282246310005")).thenReturn(true);
     
-29. The statement "programs" the test-double to behave a certain way given a certain input.
-    The test-double is already injected into the SalesOrderManager in the setup method.
+29. The statement just added "programs" the test-double to behave a certain way given a certain input.
+    The test-double is already injected into the SalesOrderManager via the constructor in the setup method.
     Run the tests, the test-double is deterministic and the test will always pass.
 
 ### Conclusion
