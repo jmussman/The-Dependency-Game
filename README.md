@@ -39,17 +39,17 @@ The dependency projects are not in the Maven repository, so you have to do a lit
 onto your computer. 
 
 1. You will need an IDE configured for Java, and with Maven, such as Eclipse or InteliJ IDEA.
-2. Clone the following three projects from GitHub (change "git&commat;github.com:jmussman" to
-   "https://github.com/jmussman" if you want to use https instead of ssh):
-    1. git&commat;github.com:jmussman/credit-card-validator.git 
-    2. git&commat;github.com:jmussman/The-Bank-of-Random-Credit-Authorizer.git 
-    3. git&commat;github.com:jmussman/Everyone-is-Authorized-Client.git
+2. Clone the following three projects from GitHub (change `git@github.com:jmussman` to
+   https://github.com/jmussman if you want to use https instead of ssh):
+    * `git clone git@github.com:jmussman/credit-card-validator.git`
+    * `git clone git@github.com:jmussman/The-Bank-of-Random-Credit-Authorizer.git` 
+    * `git clone git@github.com:jmussman/Everyone-is-Authorized-Client.git`
 3. Run a Maven install for the each project:
     * With the project open in your IDE use the Maven commands to run the "install" goal
     * Or, at the command line in the project run "mvn install" (you have to have Maven installed as a command on your computer)
-4. Clone this project from GitHub to your computer:
-    * git&commat;github.com:jmussman/The-Dependency-Game.git 
-5. Open this project (The Dependency Game) in the IDE.
+4. Clone this project (The Dependency Game) from GitHub to your computer:
+    * `git clone git@github.com:jmussman/The-Dependency-Game.git` 
+5. Open this project in your IDE.
 
 ### Project Steps
 
