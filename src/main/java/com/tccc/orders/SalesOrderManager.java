@@ -12,16 +12,16 @@ import java.math.BigDecimal;
 
 public class SalesOrderManager {
 
-    private AlwaysAuthorize authorizer;
+    private ICreditCardAuthorizer authorizer;
 
     public SalesOrderManager() {
 
-        authorizer = new AlwaysAuthorize();
+        authorizer = new BRCAdapter();
     }
 
     public boolean completeOrder(SalesOrder salesOrder, String card) {
 
         return salesOrder.getTotal().equals(BigDecimal.ZERO) != true &&
-                authorizer.authorize(salesOrder.getTotal().doubleValue(), card) != null;
+                authorizer.authorize(salesOrder.getTotal(), card) != null;
     }
 }
