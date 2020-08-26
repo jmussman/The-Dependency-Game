@@ -68,8 +68,10 @@ The steps/instructions for doing that is different in each IDE, and are not prov
     Change the code to use a boolean “result” variable initially set to false,
     and change it to true if the sale is completed.
     Return the result variable as the last step in the method.
-    * How can we reduce the second if statement to one statement?
-    Assign the result of the comparison to NOT null directly to the result variable instead of using if.
+    * How can we reduce the if statements?
+    Reverse the logic of checking for ZERO to see if it does NOT return true, and && it with the authorizer call
+    from the second if statement.
+    Then,  get rid of the variable entirely and simply return the result of the expression.
     * Don’t initialize member variables in static space.
     Make a no-argument constructor that initializes the authorizer member, that is what constructors
     are for.
