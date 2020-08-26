@@ -14,9 +14,9 @@ public class SalesOrderManager {
 
     private ICreditCardAuthorizer authorizer;
 
-    public SalesOrderManager() {
+    public SalesOrderManager(ICreditCardAuthorizer authorizer) {
 
-        authorizer = new BRCAdapter();
+        this.authorizer = authorizer;
     }
 
     public boolean completeOrder(SalesOrder salesOrder, String card) {
